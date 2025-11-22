@@ -249,7 +249,7 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #ffffff, #f2faf2);
+  background: linear-gradient(to right, #3f2727, #f2faf2);
 }
 
 .hero-text h1 {
@@ -303,7 +303,7 @@ nav a:hover {
 
 .card {
   padding: 25px;
-  background: #fff;
+  background: #9c4040;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   transition: 0.3s ease;
