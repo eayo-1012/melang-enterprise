@@ -1,84 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Melang Enterprise</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Melang Enterprise</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Meta -->
+  <meta name="description" content="Melang Enterprise — clean, stone-free garri and premium foodstuffs. Nationwide delivery via WhatsApp." />
 </head>
 <body>
 
-    <!-- NAVIGATION -->
-    <header class="header">
-        <img src="images/logo.png" class="logo" alt="Melang Enterprise Logo" />
-        <nav class="nav-links">
-            <a href="#about">About</a>
-            <a href="#products">Products</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <!-- Fixed header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Use the local image file you uploaded as the logo -->
+      <a class="brand" href="#home">
+        <img src='/mnt/data/A_logo_design_for_"Melang"_is_displayed_against_a_.png' alt="Melang logo" class="logo">
+      </a>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
+      <nav class="nav">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#products">Products</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+
+      <button id="nav-toggle" class="nav-toggle" aria-label="Open menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero (large, animated) -->
+  <section id="home" class="hero">
+    <div class="hero-inner container">
+      <div class="hero-content">
         <h1>Melang Enterprise</h1>
-        <p>Your reliable source for clean, well-processed garri and premium foodstuffs.</p>
-        <a href="#products" class="btn">View Products</a>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="about">
-        <h2>About Melang Enterprise</h2>
-        <p>
-            Melang Enterprise is a trusted distributor of neatly processed, stone-free garri and
-            other quality food items. We supply households, retailers, supermarkets, caterers, and
-            bulk buyers who value fresh products, clean packaging, and fast delivery.  
-            Our mission is simple: deliver quality food at affordable prices.
-        </p>
-    </section>
-
-    <!-- PRODUCTS -->
-    <section id="products" class="products">
-        <h2>Our Products</h2>
-
-        <div class="product-grid">
-
-            <div class="product-card">
-                <img src="images/garri.jpeg" alt="White Garri" />
-                <h3>White Garri</h3>
-                <p>Clean, dry, stone-free white garri available in multiple quantities.</p>
-            </div>
-
-            <div class="product-card">
-                <img src="images/lebu.png" alt="Lebu" />
-                <h3>Lebu</h3>
-                <p>Well-sorted, dirt-free lebu perfect for daily meals.</p>
-            </div>
-
-            <div class="product-card">
-                <img src="images/standingyellow.png" alt="Yellow Garri" />
-                <h3>Yellow Garri</h3>
-                <p>Premium yellow garri with rich taste, hygienically processed and freshly packed.</p>
-            </div>
-
+        <p class="lead">Your reliable source for clean, well-processed garri and premium foodstuffs — fresh, hygienic, and delivered nationwide.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#products">View Products</a>
+          <a class="btn ghost" href="https://wa.me/2347049861659" target="_blank" rel="noopener">Order on WhatsApp</a>
         </div>
-    </section>
+      </div>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
-        <h2>Contact Melang Enterprise</h2>
-        <p>To place an order, message us on WhatsApp. Fast responses. Nationwide delivery.</p>
-        <a href="https://wa.me/2347049861659" class="btn">Order on WhatsApp</a>
-    </section>
+      <div class="hero-art">
+        <!-- mirrored, modern chip/card with logo -->
+        <div class="card-art">
+          <img src='/mnt/data/A_logo_design_for_"Melang"_is_displayed_against_a_.png' alt="Melang art" />
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 Melang Enterprise. All Rights Reserved.</p>
-    </footer>
+  <!-- About -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2>About Melang Enterprise</h2>
+      <p class="muted">
+        Melang Enterprise is a trusted distributor of neatly processed, stone-free garri and other quality food items.
+        We supply households, retailers, supermarkets, caterers, and bulk buyers who value fresh products, clean packaging,
+        and fast delivery. Our mission is simple: deliver quality food at affordable prices.
+      </p>
+    </div>
+  </section>
 
+  <!-- Products -->
+  <section id="products" class="section products">
+    <div class="container">
+      <h2>Our Products</h2>
+
+      <div class="grid cards">
+        <article class="card">
+          <div class="card-media"><img src="images/garri.jpeg" alt="White Garri"></div>
+          <h3>White Garri</h3>
+          <p>Clean, dry, stone-free white garri available in multiple quantities for home and retail use.</p>
+          <a class="card-cta" href="https://wa.me/2347049861659">Order on WhatsApp</a>
+        </article>
+
+        <article class="card">
+          <div class="card-media"><img src="images/lebu.png" alt="Lebu"></div>
+          <h3>Lebu</h3>
+          <p>Well-sorted, dirt-free lebu perfect for everyday cooking and commercial use.</p>
+          <a class="card-cta" href="https://wa.me/2347049861659">Order on WhatsApp</a>
+        </article>
+
+        <article class="card">
+          <div class="card-media"><img src="images/standingyellow.png" alt="Yellow Garri"></div>
+          <h3>Yellow Garri</h3>
+          <p>Premium yellow garri with rich taste, hygienically processed and freshly packed for superior flavor.</p>
+          <a class="card-cta" href="https://wa.me/2347049861659">Order on WhatsApp</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact Melang Enterprise</h2>
+      <p class="muted">To place an order, message us on WhatsApp. Fast responses. Nationwide delivery.</p>
+      <a class="btn primary" href="https://wa.me/2347049861659">Order on WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp -->
+  <a class="wa-float" href="https://wa.me/2347049861659" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="20" aria-hidden="true"><path fill="currentColor" d="M..."/></svg>
+  </a>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 Melang Enterprise — All Rights Reserved</small>
+    </div>
+  </footer>
+
+  <!-- External JS -->
+  <script src="js/main.js"></script>
 </body>
 </html>
