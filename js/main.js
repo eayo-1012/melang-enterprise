@@ -1,15 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
+
   /* ================================
      MOBILE MENU TOGGLE
   ================================= */
-  const hamburger = document.querySelector(".hamburger");
-  const mobileMenu = document.querySelector(".mobile-menu");
+  const navToggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".nav");
 
-  if (hamburger) {
-    hamburger.addEventListener("click", () => {
-      mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
-    });
-  }
+  navToggle?.addEventListener("click", () => {
+    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+    nav.style.flexDirection = "column";
+    nav.style.background = "#fff";
+    nav.style.position = "absolute";
+    nav.style.top = "70px";
+    nav.style.left = "0";
+    nav.style.width = "100%";
+    nav.style.padding = "20px 0";
+    nav.style.boxShadow = "0 4px 10px rgba(0,0,0,0.15)";
+    nav.style.textAlign = "center";
+  });
 
   /* ================================
      SMOOTH SCROLL FOR ANCHORS
@@ -23,9 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
 
         // Close mobile menu after click
-        if (window.innerWidth <= 768 && mobileMenu.style.display === "flex") {
-          mobileMenu.style.display = "none";
-        }
+        if (window.innerWidth <= 920) nav.style.display = "none";
       }
     });
   });
@@ -41,18 +47,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ================================
-     TESTIMONIAL SLIDER WITH AUTO-SLIDE
+     TESTIMONIAL SLIDER
   ================================= */
   const testimonials = document.querySelectorAll(".testimonial");
   const prevBtn = document.querySelector(".slider-controls .prev");
   const nextBtn = document.querySelector(".slider-controls .next");
   let currentIndex = 0;
-  let autoSlideInterval;
+  let autoSlide;
 
   function showTestimonial(index) {
-    testimonials.forEach((t, i) => {
-      t.classList.toggle("active", i === index);
-    });
+    testimonials.forEach((t, i) => t.classList.toggle("active", i === index));
   }
 
   function nextTestimonial() {
@@ -65,21 +69,28 @@ document.addEventListener("DOMContentLoaded", () => {
     showTestimonial(currentIndex);
   }
 
-  if (testimonials.length > 0) {
+  if (testimonials.length) {
     showTestimonial(currentIndex);
-    autoSlideInterval = setInterval(nextTestimonial, 5000); // auto-slide every 5 seconds
+    autoSlide = setInterval(nextTestimonial, 5000);
   }
 
-  if (prevBtn) prevBtn.addEventListener("click", () => { prevTestimonial(); resetAutoSlide(); });
-  if (nextBtn) nextBtn.addEventListener("click", () => { nextTestimonial(); resetAutoSlide(); });
+  nextBtn?.addEventListener("click", () => {
+    nextTestimonial();
+    resetAutoSlide();
+  });
+
+  prevBtn?.addEventListener("click", () => {
+    prevTestimonial();
+    resetAutoSlide();
+  });
 
   function resetAutoSlide() {
-    clearInterval(autoSlideInterval);
-    autoSlideInterval = setInterval(nextTestimonial, 5000);
+    clearInterval(autoSlide);
+    autoSlide = setInterval(nextTestimonial, 5000);
   }
 
   /* ================================
-     STATS COUNTER
+     STATS COUNTER (IF YOU USE)
   ================================= */
   const counters = document.querySelectorAll(".stat-number");
   const speed = 50;
@@ -107,4 +118,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     observer.observe(counter);
   });
+
 });
