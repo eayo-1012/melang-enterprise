@@ -103,6 +103,27 @@ h2 { font-size: 28px; color: var(--accent); margin-bottom: 16px; text-align: cen
 .choose-card i, .step-number { font-size: 36px; color: var(--accent); margin-bottom: 10px; display: block; }
 .step-number { font-weight: 700; }
 
+
+/* ===============================
+PROCESS SECTION 
+================================= */
+
+.process { background: #ffffff;}
+.process .muted { text-align: center; margin-bottom: 25px; color: #666;}
+.process-row { display: flex; justify-content: center; align-items: stretch; gap: 25px; margin-top: 30px; flex-wrap: nowrap; }
+.process-card {  background: #f8f8f8;  width: 100%;  padding: 25px;  border-radius: 14px;  text-align: center;  transition: 0.3s ease-in-out; }
+.process-card i { font-size: 40px;  color: #e6b800;  margin-bottom: 15px; }
+.process-card h3 { font-size: 20px;  margin-bottom: 10px;  font-weight: 600;}
+.process-card p { color: #555;  font-size: 15px; }
+.process-card:hover { background: #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transform: translateY(-5px); }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .process-row {
+    flex-direction: column;
+  }
+}
+
 /* ===============================
    GALLERY
 ================================= */
