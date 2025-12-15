@@ -112,7 +112,7 @@ PROCESS SECTION
 .process .muted { text-align: center; margin-bottom: 25px; color: #666;}
 .process-row { display: flex; justify-content: center; align-items: stretch; gap: 25px; margin-top: 30px; flex-wrap: nowrap; }
 .process-card {  background: #f8f8f8;  width: 100%;  padding: 25px;  border-radius: 14px;  text-align: center;  transition: 0.3s ease-in-out; }
-.process-card i { font-size: 40px;  color: #e6b800;  margin-bottom: 15px; }
+.process-card i { font-size: 40px;  color: #ff9b6a;  margin-bottom: 15px; }
 .process-card h3 { font-size: 20px;  margin-bottom: 10px;  font-weight: 600;}
 .process-card p { color: #555;  font-size: 15px; }
 .process-card:hover { background: #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transform: translateY(-5px); }
@@ -152,7 +152,8 @@ PROCESS SECTION
 /* ===============================
    CONTACT
 ================================= */
-.contact .btn { font-size: 16px; }
+.contact p {font-style: normal; text-align: center;}
+.contact .btn { font-size: 16px; align-items: center;}
 
 /* ===============================
    FLOATING WHATSAPP
@@ -163,7 +164,7 @@ PROCESS SECTION
    FOOTER
 ================================= */
 .site-footer { padding: 20px 0; background: #0f1720; color: #fff; text-align: center; }
-
+.sitefooter p { font-style: normal; margin-bottom: 10px; text-align: center; }
 /* ===============================
    RESPONSIVE
 ================================= */
@@ -173,4 +174,118 @@ PROCESS SECTION
   .nav { display: none; }
   .nav-toggle { display: block; }
   .choose-grid, .process-grid, .stats-grid, .gallery-grid { grid-template-columns: 1fr; }
+}
+
+/* ===============================
+   MOBILE ALIGNMENT & OPTIMIZATION
+================================= */
+@media (max-width: 768px) {
+
+  /* GLOBAL SECTION SPACING */
+  .section {
+    padding: 60px 0;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: auto;
+    padding-top: 130px;
+  }
+
+  .hero-inner {
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  /* HERO IMAGE */
+  .card-art {
+    width: 100%;
+    max-width: 340px;
+    height: 260px;
+  }
+
+  .card-art img {
+    width: 180px;
+  }
+
+  /* NAV MENU (MOBILE) */
+  .nav {
+    align-items: center;
+  }
+
+  .nav-link {
+    padding: 12px 0;
+    font-size: 16px;
+  }
+
+  /* PRODUCTS */
+  .grid.cards {
+    gap: 18px;
+  }
+
+  /* PROCESS */
+  .process-row {
+    gap: 18px;
+  }
+
+  .process-card {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  /* GALLERY */
+  .gallery-img {
+    height: 200px;
+  }
+
+  /* TESTIMONIALS */
+  .testimonial {
+    padding: 10px;
+  }
+
+  /* CONTACT */
+  .contact {
+    text-align: center;
+  }
+
+  .contact p {
+    max-width: 90%;
+    margin: 0 auto 16px;
+  }
+
+  .contact .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  /* FOOTER */
+  .site-footer small {
+    font-size: 13px;
+    line-height: 1.6;
+  }
 }
